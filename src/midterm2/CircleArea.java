@@ -1,4 +1,4 @@
-package midterm3;
+package midterm2;
 
 import static java.lang.Math.PI;
 import static java.lang.Math.pow;

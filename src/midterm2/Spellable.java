@@ -1,4 +1,4 @@
-package midterm4;
+package midterm2;
 
 import java.util.HashMap;
 import java.util.Map;

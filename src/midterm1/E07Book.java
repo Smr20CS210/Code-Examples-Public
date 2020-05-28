@@ -1,4 +1,4 @@
-package midterm2;
+package midterm1;
 
 /*
  * An uncommented, unfinished version of the Book class.

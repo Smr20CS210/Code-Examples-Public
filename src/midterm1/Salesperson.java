@@ -1,4 +1,4 @@
-package midterm2;
+package midterm1;
 
 //           Subclass            Superclass
 public class Salesperson extends Employee {

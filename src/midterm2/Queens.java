@@ -1,4 +1,4 @@
-package midterm4;
+package midterm2;
 
 public class Queens {
 

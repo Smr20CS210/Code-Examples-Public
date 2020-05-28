@@ -1,4 +1,4 @@
-package midterm3;
+package midterm2;
 
 public interface MyList<E> {
     public void add(E value);

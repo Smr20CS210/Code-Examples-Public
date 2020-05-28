@@ -1,4 +1,4 @@
-package midterm2;
+package midterm1;
 
 /*
  * A class demonstrating the use of a static variable.

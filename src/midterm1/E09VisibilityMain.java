@@ -1,4 +1,4 @@
-package midterm2;
+package midterm1;
 
 public class E09VisibilityMain {
 

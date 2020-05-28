@@ -1,4 +1,4 @@
-package midterm3;
+package midterm2;
 
 import java.util.Scanner;
 

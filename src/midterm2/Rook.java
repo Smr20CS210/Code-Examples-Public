@@ -1,4 +1,4 @@
-package midterm3;
+package midterm2;
 
 public class Rook extends Piece {
 
