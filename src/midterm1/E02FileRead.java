@@ -17,12 +17,14 @@ public class E02FileRead {
 
         try {
             fileInput = new Scanner(new File("TestCases/InputTest01"));
+            // fileInput = new Scanner(new File("TestCases/e02-input.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
         while (fileInput.hasNext()) {
-            System.out.println(fileInput.nextLine());
+            // System.out.println(fileInput.nextLine());
+            System.out.println(fileInput.next());
         }
 
         fileInput.close();

@@ -1,0 +1,1 @@
+This is an example for Java Standart Input (Stdin) read from a file.

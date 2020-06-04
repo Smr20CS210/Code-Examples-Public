@@ -4,8 +4,8 @@ public class E03Equality {
     public static void main(String[] args) {
 
         String s1 = "hi";
-        String s2 = "h";
-        s2 += "i";
+        String s2 = "hi";
+        // s2 += "i";
 
         // Note this will print false!
         System.out.println("s1==s2 is " + (s1 == s2));
