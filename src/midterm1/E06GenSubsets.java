@@ -15,8 +15,9 @@ public class E06GenSubsets {
     }
 
     private static void subsetsHelper(String chars, String soFar) {
+        System.out.println(chars + " " + soFar);
         if (chars.isEmpty()) {
-            System.out.println(soFar);
+            // System.out.println(soFar);
         } else {
             // Include this element
             subsetsHelper(chars.substring(1), soFar + chars.charAt(0));

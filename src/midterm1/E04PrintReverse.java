@@ -5,7 +5,7 @@ import java.util.Stack;
 public class E04PrintReverse {
 
     public static void main(String[] args) {
-        String str = "Hello my name is Inigo Montoya";
+        String str = "Hello! my name is Charlie Chaplin!";
 
         String[] words = str.split(" ");
 
@@ -14,6 +14,8 @@ public class E04PrintReverse {
         for (String word : words) {
             stack.push(word);
         }
+
+        System.out.println(stack);
 
         while (!stack.empty()) {
             System.out.print(stack.pop() + " ");

@@ -13,6 +13,7 @@ public class E06DigitSum {
      * negative values.
      */
     public static int digitSum(int n) {
+        System.out.println(n);
         if (n < 0) {
             return digitSum(-n);
         } else if (n < 10) {

@@ -12,10 +12,11 @@ public class E06IsSubsequence {
      * Returns whether or not s2 is a subsequence of s1.
      */
     public static boolean isSubsequence(String s1, String s2) {
+        System.out.println(s1 + " " + s2);
         // Base Case
         if (s2.isEmpty()) {
             return true;
-        } else if (s1.isEmpty()) {
+        } else if (s1.isEmpty() || s1.length() < s2.length()) {
             return false;
         }
         // Recursive Case

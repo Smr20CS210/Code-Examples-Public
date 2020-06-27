@@ -40,4 +40,8 @@ public class E07Book {
         return ISBN;
     }
 
+    public String toString() {
+        return "Book:" + ISBN;
+    }
+
 }

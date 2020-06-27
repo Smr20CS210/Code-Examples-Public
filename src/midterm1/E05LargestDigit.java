@@ -7,7 +7,6 @@ public class E05LargestDigit {
         System.out.println(largestDigit(40109));
         System.out.println(largestDigit(-163505));
         System.out.println(largestDigit(0));
-
     }
 
     /*
@@ -15,6 +14,7 @@ public class E05LargestDigit {
      * the largest single digit from n.
      */
     public static int largestDigit(int n) {
+        System.out.println(n);
         if (n < 0) {
             return largestDigit(-n);
         } else if (n < 10) {

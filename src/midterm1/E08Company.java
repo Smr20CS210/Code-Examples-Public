@@ -5,8 +5,23 @@ public class E08Company {
     public static void main(String[] args) {
         Employee susan = new Employee("Susan", 60000);
 
-        Salesperson daniel = new Salesperson("Daniel", 50000, 80000,
+        Salesperson daniel = new Salesperson("Daniel",
+                50000,
+                80000,
                 Salesperson.State.FL);
+        
+        Salesperson ruby = new Salesperson("Daniel", 50000,
+                80000,
+                Salesperson.State.FL);
+
+        System.out.println(susan.getSalary());
+        System.out.println(daniel.getSalary());
+
+        boolean isSalesperson = susan instanceof Salesperson;
+
+        System.out.println(isSalesperson);
+
+        System.out.println(daniel.equals(ruby));
 
         /*
          * An example of polymorphism.
@@ -36,8 +51,9 @@ public class E08Company {
          * of Employee.
          */
         // Salesperson tyler = new Employee("Tyler", 32000);
-        System.out.println(susan.getSalary());
-        System.out.println(daniel.getSalary());
+        // System.out.println(susan.getSalary());
+        // System.out.println(daniel.getSalary());
+
         /*
          * Notice that the overriden method is called for 'arjun'.
          * The method that gets called at run-time depends on the

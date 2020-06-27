@@ -25,8 +25,11 @@ public class E04Repeat {
     public static void repeat(Queue<Integer> q) {
         int queueSize = q.size();
         for (int i = 0; i < queueSize; i++) {
+            System.out.println("before " + q);
             q.add(q.peek());
+            System.out.println("peek " + q);
             q.add(q.remove());
+            System.out.println("remove " + q);
         }
     }
 
