@@ -2,6 +2,27 @@ package midterm2;
 
 public class MyLinkedList<E> implements MyList<E> {
 
+    private class ListNode<E> {
+        E data;
+        ListNode<E> next;
+
+        // Creates a terminal ListNode containing null as data.
+        public ListNode() {
+            this(null, null);
+        }
+
+        // Creates a terminal ListNode with the specified data.
+        public ListNode(E data) {
+            this(data, null);
+        }
+
+        // Creates a ListNode with the specified data and next node.
+        public ListNode(E data, ListNode<E> next) {
+            this.data = data;
+            this.next = next;
+        }
+    }
+
     private ListNode<E> front;
 
     public MyLinkedList() {
@@ -106,27 +127,6 @@ public class MyLinkedList<E> implements MyList<E> {
             current = current.next;
         }
         return current;
-    }
-
-    private class ListNode<E> {
-        E data;
-        ListNode<E> next;
-
-        // Creates a terminal ListNode containing null as data.
-        public ListNode() {
-            this(null, null);
-        }
-
-        // Creates a terminal ListNode with the specified data.
-        public ListNode(E data) {
-            this(data, null);
-        }
-
-        // Creates a ListNode with the specified data and next node.
-        public ListNode(E data, ListNode<E> next) {
-            this.data = data;
-            this.next = next;
-        }
     }
 }
 

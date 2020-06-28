@@ -7,15 +7,16 @@ public class Person {
     // Person() {
     // }
 
-    // Person(Integer age) {
-    // this.age = age;
-    // }
+    Person(Integer age) {
+        this.age = age;
+        // System.out.println(this.age);
+    }
 
-    // Person() {
-    // System.out.println("Person class Constructor");
-    // }
+    Person() {
+        System.out.println("Person class Constructor");
+    }
     //
-    // void message() {
-    // System.out.println("This is person class");
-    // }
+    void message() {
+        System.out.println("This is person class");
+    }
 }

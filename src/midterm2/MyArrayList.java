@@ -2,7 +2,7 @@ package midterm2;
 
 public class MyArrayList {
 
-    private static final int INITIAL_CAPACITY = 10;
+    private static final int INITIAL_CAPACITY = 1;
 
     private int size;
     private int capacity;
@@ -65,6 +65,16 @@ public class MyArrayList {
 
     public int get(int index) {
         // ERROR checking!
+        try {
+            if (index < size) {
+                return array[index];
+            }
+            else
+                throw new Exception();
+        }
+        catch (Exception e) {
+            System.out.println(e + ": Array index out of bounds");
+        }
         return array[index];
     }
 

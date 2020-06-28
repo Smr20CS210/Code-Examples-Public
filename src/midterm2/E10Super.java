@@ -2,9 +2,9 @@ package midterm2;
 
 public class E10Super {
     public static void main(String args[]) {
-        superVariables();
+        // superVariables();
         // superMethod();
-        // superConstructor();
+        superConstructor();
     }
 
     public static void superVariables() {
@@ -12,13 +12,14 @@ public class E10Super {
         s.getAge();
     }
 
-    // public static void superMethod() {
-    // Student s = new Student();
-    // // calling display() of Student
-    // s.display();
-    // }
+    public static void superMethod() {
+        Student s = new Student();
+        // calling display() of Student
+        s.display();
+    }
 
-    // public static void superConstructor() {
-    // Student s = new Student();
-    // }
+    public static void superConstructor() {
+        Student s = new Student(15);
+        System.out.println(s.age);
+    }
 }

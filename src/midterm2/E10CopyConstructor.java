@@ -21,6 +21,11 @@ class Complex {
     public String toString() {
         return "(" + re + " + " + im + "i)";
     }
+
+    public void update(double re, double im) {
+        this.re = re;
+        this.im = im;
+    }
 }
 
 public class E10CopyConstructor {
@@ -33,7 +38,9 @@ public class E10CopyConstructor {
 
         // Note that following doesn't involve a copy constructor call as
         // non-primitive variables are just references.
-        Complex c3 = c2;
+        // Complex c3 = c2;
+
+        // c3.update(1, 2);
 
         System.out.println(c2); // toString() of c2 is called here
     }
