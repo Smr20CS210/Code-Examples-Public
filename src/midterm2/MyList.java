@@ -1,7 +1,9 @@
 package midterm2;
 
 /* interface defines the signature of methods
- * but does not implement them.
+ * but does not implement them. Any class implementing
+ * this interface must define the function body of
+ * all functions in the interface
  * 
  * interface may also define some constants usable
  * by the implementing class(es)
