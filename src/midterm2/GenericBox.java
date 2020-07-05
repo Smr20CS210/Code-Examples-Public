@@ -3,7 +3,7 @@ package midterm2;
 public class GenericBox<E> {
 
     private E item;
-
+    
     // Constructor
     public GenericBox() {
         item = null;
@@ -14,9 +14,8 @@ public class GenericBox<E> {
         this.item = item;
     }
 
-    // get method
+    // Get method
     public E get() {
         return this.item;
     }
-
 }
