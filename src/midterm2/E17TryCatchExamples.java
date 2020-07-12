@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class TryCatchExamples {
+public class E17TryCatchExamples {
 
     public static void main(String[] args) {
 
@@ -35,6 +35,12 @@ public class TryCatchExamples {
         }
         // Automatically cleaned up.
 
+        // try {
+        // openFile("file.txt");
+        // } catch (FileNotFoundException e){
+        //
+        // }
+
     }
 
     /*
@@ -44,6 +50,7 @@ public class TryCatchExamples {
      */
     private static void openFile(String filename) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(filename));
+        // throw new FileNotFoundException("File not found");
     }
 
 }

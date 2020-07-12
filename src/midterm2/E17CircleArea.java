@@ -3,17 +3,18 @@ package midterm2;
 import static java.lang.Math.PI;
 import static java.lang.Math.pow;
 
-public class CircleArea {
+import java.util.Scanner;
+
+public class E17CircleArea {
 
     public static void main(String[] args) {
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         Double radius = Double.valueOf(scanner.nextLine());
 
         Double area = PI * pow(radius, 2);
 
         System.out.println(area);
-
     }
 
 }

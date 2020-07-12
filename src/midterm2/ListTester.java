@@ -1,10 +1,5 @@
 package midterm2;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
-
 public class ListTester {
 
     public static void main(String[] args) {
@@ -26,17 +21,6 @@ public class ListTester {
         // linkedList.remove(5);
 
         System.out.println(linkedList);
-
-        // Nothing to sweep up
-
-        someFunction();
-
-        // Garbage collector can sweep up the below hashMap and TreeSet
-    }
-
-    public static void someFunction() {
-        Map<String, String> map = new HashMap<>();
-        Set<String> set = new TreeSet<>();
     }
 
 }
