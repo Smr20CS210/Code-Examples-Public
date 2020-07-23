@@ -1,38 +1,47 @@
 package finalExam;
 
-import java.util.HashMap;
+import java.time.Duration;
+import java.time.Instant;
 
 public class Memoization {
-
     private static int numCalls = 0;
-
-    private static HashMap<Integer, Integer> memo = new HashMap<Integer, Integer>();
+    private static int[] memo = new int[51];
 
     public static void main(String[] args) {
-        System.out.println(fib(25));
+        Instant start = Instant.now();
+        
+        for (int i = 0; i < 51; i++) {
+            memo[i] = -1;
+        }
+        // 0, 1, 1, 2, 3, 5, 8, ....
+        memo[0] = 0;
+        memo[1] = 1;
+
+        // TODO: code here
+        System.out.println(fib(33));
         System.out.println(numCalls);
+
+        // fib(n) = fib(n-1) + fib(n-2)
+
+        Instant end = Instant.now();
+        Duration timeElapsed = Duration.between(start, end);
+        System.out.println(timeElapsed.toMillis() + " ms");
     }
 
-    // 0, 1, 1, 2, 3, 5, 8, 13, 21...
     public static int fib(int n) {
+        // numCalls++;
         if (n < 0) {
-            throw new IllegalArgumentException(
-                    "Cannot pass in negative values");
+            throw new IllegalArgumentException("Cannot pass negative values");
         }
-        if (memo.containsKey(n)) {
-            return memo.get(n);
+        if (memo[n] != -1) {
+            return memo[n];
         }
         numCalls++;
-        System.out.println("Called fib with n = " + n);
         if (n == 0 || n == 1) {
-            memo.put(n, n);
             return n;
         } else {
-            int result = fib(n - 1) + fib(n - 2);
-            memo.put(n, result);
-            return result;
+            memo[n] = fib(n - 1) + fib(n - 2);
         }
-
+        return memo[n];
     }
-
 }
