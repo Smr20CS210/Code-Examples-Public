@@ -2,7 +2,7 @@ package finalExam;
 
 import java.util.TreeSet;
 
-public class E25Subsets {
+public class E23Subsets {
     public static void main(String[] args) {
         TreeSet<Character> chars = new TreeSet<>();
         chars.add('c');
@@ -17,12 +17,15 @@ public class E25Subsets {
 
     private static void printHelper(TreeSet<Character> chars,
             TreeSet<Character> soFar) {
+        // base case
         if (chars.isEmpty()) {
             System.out.println(soFar);
         } else {
+            // choose
             char ch = chars.first();
             chars.remove(ch);
 
+            // exclude
             // Don't include this item. Don't add it to soFar
             // Then explore all future possibilities with that item excluded
             printHelper(chars, soFar);
@@ -32,6 +35,7 @@ public class E25Subsets {
             // Then explore all future possibilities with that item included
             printHelper(chars, soFar);
 
+            // unchoose
             chars.add(ch);
             soFar.remove(ch);
         }

@@ -3,8 +3,7 @@ package finalExam;
 import java.util.ArrayList;
 import java.util.List;
 
-public class E24DiceRoll {
-
+public class E22DiceRoll {
     public static void main(String[] args) {
         diceRoll(2);
     }
@@ -14,10 +13,12 @@ public class E24DiceRoll {
     }
 
     private static void diceRollHelper(int numDie, List<Integer> chosen) {
-        // Base Case
+        // Base case
         if (numDie == 0) {
             System.out.println(chosen);
-        } else { // Recursive Case
+        }
+        // Recursive Case
+        else {
             // For all possible decisions
             for (int i = 1; i <= 6; i++) {
                 // Choose
@@ -27,11 +28,11 @@ public class E24DiceRoll {
                 diceRollHelper(numDie - 1, chosen);
 
                 // Unchoose
-                // Try removing the below line and see what happens.
+                // Try to comment the following line
+                // to see what happens
                 // Can you understand why?
                 chosen.remove(chosen.size() - 1);
             }
         }
     }
-
 }

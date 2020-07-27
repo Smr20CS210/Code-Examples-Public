@@ -14,7 +14,7 @@ public class E17ExceptionPractice {
     }
 
     public static void middleFunction() {
-        // lastFunction(-2);
+        lastFunction(-2);
         try {
             lastFunction(-5);
         } catch (IllegalArgumentException e) {

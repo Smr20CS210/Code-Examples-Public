@@ -3,7 +3,7 @@ package finalExam;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class E25Combinations {
+public class E23Combinations {
 
     public static void main(String[] args) {
         combos("GOOGLE", 3);
@@ -17,17 +17,22 @@ public class E25Combinations {
 
     private static void combosHelper(String s, int k, String soFar,
             Set<String> solutions) {
+        // base case
         if (k == 0) {
             solutions.add(soFar);
         } else {
+            // Explore all options
             for (int i = 0; i < s.length(); i++) {
                 String choice = s.substring(i, i + 1);
                 if (!soFar.contains(choice)) {
-                    soFar = soFar + choice;
-                    String newS = s.substring(0, i) + s.substring(i + 1);
-                    combosHelper(newS, k - 1, soFar, solutions);
-                    soFar = soFar.substring(0,
-                            soFar.length() - choice.length());
+                    // choose
+                    soFar += choice;
+
+                    // String newS = s.substring(0, i) + s.substring(i + 1);
+                    // explore
+                    combosHelper(s, k - 1, soFar, solutions);
+                    // unchoose
+                    soFar = soFar.substring(0, soFar.length() - 1);
                 }
             }
         }
