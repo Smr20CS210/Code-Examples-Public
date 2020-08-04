@@ -39,6 +39,8 @@ class Edge {
 /*
  * Union-Find Disjoint Sets Library,
  * using both path compression and union by rank heuristics
+ * Example taken from Steven Halim's Competitive Programming book repo:
+ * https://github.com/stevenhalim/cpbook-code/blob/master/ch4/mst/kruskal.java
  * 
  * path-compression: flattens the tree to set all nodes with same parent
  * 
@@ -131,6 +133,8 @@ public class E26Kruskal {
 
         // Kruskal's algorithm
         int V = sc.nextInt(), E = sc.nextInt();
+
+        // We only care about the weight as priority in a min-heap
         PriorityQueue<Edge> pq = new PriorityQueue<>(E,
                 Comparator.comparingInt(o -> o.w()));
 
